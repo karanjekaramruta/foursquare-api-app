@@ -1,0 +1,16 @@
+<%- include('partials/header'); %>
+<div class="venue-container">
+    <div class="d-flex flex-wrap">
+        <% venues.forEach(function(venue){ %>
+        <div class="p-2 border flex-fill mr-2 ml-2 mt-2 mb-2 venue-card">
+            <img class="venue-icon" src=<%=venue.iconUrl%> alt=<%=venue.name%> />
+            <div class="venue-details">
+                <h3><%=venue.name%></h3>
+                <p><%=venue.address%></p>
+                <span class="align-text-bottom"><small><i><%=venue.type%></i></small></span>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</div>
+<%- include('partials/footer'); %>
